@@ -1,0 +1,96 @@
+@import "aside.css";
+@import "main.css";
+@import "section.css";
+@import "header.css";
+@import "layout.css";
+@import "footer.css";
+.wrapper {
+    display: grid;
+    /*width: 100%;*/
+    grid-template-rows: 1fr auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "hd " "se" "ma" "as" "ft";
+    /* border: 2px solid red;*/
+}
+
+* {
+    max-width: 100%;
+    height: auto;
+    box-sizing: content-box;
+}
+
+#header {
+    grid-area: hd;
+    /* background-color: aqua; */
+    border-bottom: 0.1px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+#section {
+    grid-area: se;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* flex-flow: row wrap; */
+    height: auto;
+    padding: 40px;
+    /* background-image: url("aeso.jpg"); */
+    margin: 0;
+    padding: 0;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#main {
+    grid-area: ma;
+    /* background-color: purple; */
+    margin: 0;
+    padding: 0;
+}
+
+#aside {
+    grid-area: as;
+    /* background-color: green; */
+    /* border-left: 0.1px solid black; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+}
+
+#footer {
+    grid-area: ft;
+    /* background-color: blue; */
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+
+
+@media (min-width: 300px) and (max-width: 600px) {
+    .wrapper {
+        display: grid;
+        /*width: 100%;*/
+        width: 100%;
+        grid-template-rows: 1fr auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "hd " "se" "ma" "as" "ft";
+        /* border: 2px solid red;*/
+    }
+}
+
+@media (min-width: 600px) and (min-width: 900px) {
+    .wrapper {
+        display: grid;
+        /*width: 100%;*/
+        width: 100%;
+        grid-template-rows: 88px auto auto auto;
+        grid-template-columns: 350px 50px;
+        grid-template-areas: "hd hd hd hd hd hd hd hd hd" "se se se se se se se se se" "ma ma ma ma ma as as as as " "ft ft ft ft ft ft ft ft ft";
+        /* border: 2px solid red;*/
+    }
+}

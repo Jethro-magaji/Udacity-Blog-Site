@@ -1,0 +1,97 @@
+        @media (min-width: 300px) and (max-width:900px) {
+            #section {
+                display: flex;
+                flex-direction: row;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+            }
+            .Big-image {
+                width: 100%;
+            }
+            .small-image {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 300px) {
+            #section {
+                display: flex;
+                flex-direction: column;
+                flex-flow: column wrap;
+                justify-content: space-evenly;
+            }
+        }
+        
+        @media only screen and (max-width: 1200px) {
+            #rec {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                grid-template-areas: "rec1 rec1 rec2 rec2" "rec3 rec3 rec4 rec4";
+            }
+            #recommended {
+                margin-left: 0;
+            }
+            #lat {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                grid-template-areas: "lat1 lat1 lat2 lat2" "lat3 lat3 lat4 lat4";
+            }
+            #latest-post {
+                margin-left: 0;
+            }
+        }
+        
+        #ga1 {
+            grid-area: rec1;
+        }
+        
+        #ga2 {
+            grid-area: rec2;
+        }
+        
+        #ga3 {
+            grid-area: rec3;
+        }
+        
+        #ga4 {
+            grid-area: rec4;
+        }
+        
+        #lat1 {
+            grid-area: lat1;
+        }
+        
+        #lat2 {
+            grid-area: lat2;
+        }
+        
+        #lat3 {
+            grid-area: lat3;
+        }
+        
+        #lat4 {
+            grid-area: lat4;
+        }
+        
+        @media only screen and (max-width: 200px) {
+            #rec {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                grid-template-areas: "rec1 rec1 rec2 rec2" "rec3 rec3 rec4 rec4";
+            }
+            #lat {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                grid-template-areas: "lat1 lat1 lat2 lat2" "lat3 lat3 lat4 lat4";
+            }
+            .recommended {
+                margin: 0;
+            }
+            .latest-post {
+                margin: 0;
+            }
+        }
